@@ -1,0 +1,15 @@
+<h2 class=" m-3">List of Courses</h2>
+
+<div class="row">
+    {{#each courses as |course|}}
+    <div class="card col-4 m-2" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{course.name}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{course.type}}</h6>
+        <a href="#" class="btn btn-danger card-link">Delete</a>
+    </div>
+    </div>
+    {{/each}}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
