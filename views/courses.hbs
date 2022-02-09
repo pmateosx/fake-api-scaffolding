@@ -3,16 +3,22 @@
 
 <div class="row">
     {{#each courses as |course|}}
-    <div class="card col-4 m-2" style="width: 18rem;">
-    <div class="card-body">
-        <h5 class="card-title">{{course.name}}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">{{course.type}}</h6>
-         <a href="/courses/{{course.id}}" class="btn btn-primary card-link">Detail</a>
-        <a href="#" class="btn btn-danger card-link">Delete</a>
-    </div>
+    <div class="card col-4 m-2" style="width: 18rem;" id="course-{{course.id}}">
+        <div class="card-body">
+            <h5 class="card-title">{{course.name}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{course.type}}</h6>
+            <a href="/courses/{{course.id}}" class="btn btn-primary card-link">Detail</a>
+
+            <form class="d-inline">
+                <button type="button" value="{{course.id}}" class="btn btn-danger delete-btn"> Delete </button>
+            </form>
+
+        </div>
+
     </div>
     {{/each}}
 </div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/delete.js"></script>
