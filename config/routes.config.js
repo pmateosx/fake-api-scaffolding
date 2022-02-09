@@ -13,5 +13,8 @@ router.get('/courses', coursesController.list)
 router.get('/courses/new', coursesController.create)
 router.get('/courses/:id', coursesController.get)
 router.post('/courses', coursesController.doCreate)
+router.get('/courses/update/:id', coursesController.update)
+router.post('/courses/update/:id', coursesController.doUpdate)
+
 
 module.exports = router;
